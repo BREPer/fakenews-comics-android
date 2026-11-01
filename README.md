@@ -8,7 +8,7 @@
 
 - 参数：`minSdk 30`、`compileSdk/targetSdk 36`、单 Activity、单模块（`app`）+ 采集模块（`baselineprofile`）
 - 自托管签名分发，不上应用商店；出包与升级流程见
-  [`docs/2026-10-26-Android客户端出包与升级.md`](docs/2026-10-26-Android客户端出包与升级.md)
+  [`docs/出包与升级.md`](docs/出包与升级.md)
 
 ## 构建
 
