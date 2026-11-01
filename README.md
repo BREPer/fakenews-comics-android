@@ -6,6 +6,8 @@
 底栏与 Web 逐项同名同序：**首页 / 书架 / 搜索 / 漫画库 / 设置**（外加详情、阅读器）。
 漫画库的新建/改路径/删除、上传、目录点选都在客户端内完成；离线整章下载未做（阅读只依赖图片磁盘缓存）。
 
+- 服务端（Go + Web + fpk 打包）：[fakenews-comics-server](https://github.com/BREPer/fakenews-comics-server)；
+  接口契约以它的 README「API 一览」为准
 - 参数：`minSdk 30`、`compileSdk/targetSdk 36`、单 Activity、单模块（`app`）+ 采集模块（`baselineprofile`）
 - 自托管签名分发，不上应用商店；出包与升级流程见 [`docs/出包与升级.md`](docs/出包与升级.md)
 - **想改代码先看** [`docs/项目结构.md`](docs/项目结构.md)（分包、按任务找文件、7 条硬约束）
