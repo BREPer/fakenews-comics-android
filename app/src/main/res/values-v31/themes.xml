@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 系统闪屏（API 31+，targetSdk 36 会自动启用）。
+         底色用海报的底色、图标置空：系统闪屏只存在一两百毫秒，先弹一个应用图标再换成
+         整张海报会读成「闪了一下」；留纯底色则相当于海报前的一次暖色铺垫。
+         图标不能省略（省略会退回默认应用图标），所以给一张全透明的 drawable。 -->
+    <style name="Theme.FakenewsComics" parent="ThemeFakenewsBase">
+        <item name="android:windowSplashScreenBackground">@color/launch_poster_bg</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/splash_icon_blank</item>
+    </style>
+</resources>

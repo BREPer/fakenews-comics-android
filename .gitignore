@@ -1,0 +1,18 @@
+# Gradle 与构建产物
+.gradle/
+build/
+.kotlin/
+local.properties
+
+# 留档截图（tools/_ui_shot.mjs 产出，可复跑）
+_shots/
+
+# 签名材料一律不入库：密钥在 ~/.android，口令在 ~/.gradle/gradle.properties
+keystore/
+*.jks
+*.keystore
+key.properties
+
+# 发布包不入库（3.6MB 二进制，每次重打都是整块 diff）；校验和随 Release 附件发布
+release/*.apk
+release/*.aab

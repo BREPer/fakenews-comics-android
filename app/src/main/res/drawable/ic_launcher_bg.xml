@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 肥牛漫画启动图标背景：品牌橙。前景（ic_launcher_fg）是透明底的白色标记 +
+     灰色折面，叠加在此橙底上；自适应图标遮罩裁出的圆角处也是橙色，无缝。 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#F26432" />
+</shape>

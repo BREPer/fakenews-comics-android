@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 冷启动窗口底色：与浅色主题的 app-bg 同值（对应 Web index.css 的 app-bg 变量），
+         避免 Compose 首帧之前露出与主题不符的底色。深色变体在 values-night 目录 -->
+    <color name="window_background">#E9EDF3</color>
+
+    <!-- 启动海报的底色（取自海报左上角与上边缘）。API 31+ 的系统闪屏用它，
+         这样「系统闪屏 → 海报」是同一块暖色，不会先闪一下浅蓝灰再跳到暖色。 -->
+    <color name="launch_poster_bg">#E7D9CC</color>
+</resources>

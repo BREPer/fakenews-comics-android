@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 系统闪屏图标的占位：全透明。
+     启动画面交给我们自己的海报（BootScreen）来画，这里只保留底色，
+     避免「应用图标一闪 → 整张海报」两段式观感。 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@android:color/transparent" />
+</shape>

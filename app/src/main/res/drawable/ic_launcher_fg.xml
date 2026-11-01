@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 肥牛漫画启动图标前景：白色标记 + 灰色折面（透明底）。
+     背景由 ic_launcher_bg 提供品牌橙，自适应图标遮罩裁出的圆角处也仍是橙色。
+     几何与 docs/logo/fakenews-mark-clean.svg 一致（1024 视口）。 -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="1024dp"
+    android:height="1024dp"
+    android:viewportWidth="1024"
+    android:viewportHeight="1024">
+    <!-- 灰色折面 -->
+    <path android:fillColor="#E2E2E2"
+        android:pathData="M312,376 L440,376 L440,504 Z" />
+    <path android:fillColor="#E2E2E2"
+        android:pathData="M712,648 L584,648 L584,520 Z" />
+    <!-- 白色标记（两条对角带，带 18px 圆角） -->
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M512,168 L445.27,234.73 A18,18 0 0 0 440,247.46 L440,376 L712,648 L778.73,581.27 A18,18 0 0 0 784,568.54 L784,447.46 A18,18 0 0 0 778.73,434.73 Z" />
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M512,856 L578.73,789.27 A18,18 0 0 0 584,776.54 L584,648 L312,376 L245.27,442.73 A18,18 0 0 0 240,455.46 L240,576.54 A18,18 0 0 0 245.27,589.27 Z" />
+</vector>

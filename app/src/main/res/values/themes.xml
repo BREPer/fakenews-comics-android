@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 主题的公共部分单列一层，因为 values-v31 要在同名主题上追加系统闪屏属性，
+         而 style 在带限定符的目录里是**整体替换**而不是合并 —— 不抽这一层，v31 就得
+         把下面五条全抄一遍，改一处漏一处。 -->
+    <style name="ThemeFakenewsBase" parent="android:Theme.DeviceDefault.DayNight">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/window_background</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <!-- 阅读器要全屏出血：允许画面铺进挖孔/曲面边缘，控件自己用 safeDrawing 让开 -->
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+    </style>
+
+    <style name="Theme.FakenewsComics" parent="ThemeFakenewsBase" />
+</resources>

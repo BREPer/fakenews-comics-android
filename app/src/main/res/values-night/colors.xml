@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 深色主题的冷启动窗口底色：与深色 app-bg（对应 Web index.css 的 dark 块）同值 -->
+    <color name="window_background">#161923</color>
+</resources>

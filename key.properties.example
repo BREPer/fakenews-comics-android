@@ -1,0 +1,6 @@
+# 签名配置示例。实际口令不要提交：把下面几行加到 ~/.gradle/gradle.properties
+# （Gradle 用户目录，不在本仓库里），密钥文件也放在仓库外。
+fakenewsStoreFile=C:/Users/<you>/.android/fakenews-release.jks
+fakenewsStorePassword=<store-password>
+fakenewsKeyAlias=fakenews
+fakenewsKeyPassword=<key-password>

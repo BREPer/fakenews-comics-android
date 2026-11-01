@@ -1,0 +1,53 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  android:
+    name: 单元测试 + assembleDebug
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - uses: gradle/actions/setup-gradle@v4
+
+      - uses: android-actions/setup-android@v3
+        with:
+          # 只预装平台；build-tools 缺失时 AGP 会自行下载（licenses 已在此步骤接受）
+          packages: platforms;android-36
+
+      - name: 单元测试
+        run: ./gradlew :app:testDebugUnitTest --no-daemon --stacktrace
+
+      - name: assembleDebug
+        run: ./gradlew :app:assembleDebug --no-daemon --stacktrace
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: debug-apk
+          path: app/build/outputs/apk/debug/*.apk
+          if-no-files-found: warn
+          retention-days: 7
+
+      - name: 测试报告
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-report
+          path: app/build/reports/tests/
+          if-no-files-found: ignore
+          retention-days: 7
