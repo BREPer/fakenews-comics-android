@@ -4,7 +4,7 @@ build/
 .kotlin/
 local.properties
 
-# 留档截图（tools/_ui_shot.mjs 产出，可复跑）
+# 留档截图（tools/android_tour.py 产出，可复跑）
 _shots/
 
 # 签名材料一律不入库：密钥在 ~/.android，口令在 ~/.gradle/gradle.properties

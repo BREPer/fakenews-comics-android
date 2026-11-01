@@ -26,8 +26,9 @@ export JAVA_HOME=/path/to/jdk-17      # 需要 JDK 17
 ./gradlew :app:assembleDebug          # wrapper 自带 Gradle 8.9，首次运行会自动下载
 ```
 
-Gradle 不需要预装，也不要用系统上的其他版本（wrapper 固定 8.9）；离线环境可先
-`./gradlew --offline` 或把发行包放到 `~/.gradle/wrapper/dists/`。
+Gradle 不需要预装，也不要用系统上的其他版本（wrapper 固定 8.9）。已缓存过依赖时可用
+`./gradlew :app:assembleDebug --offline`（`--offline` 只是开关，**必须带任务名**，独用什么都不做）；
+要完全离线构建，还得把 8.9 发行包放进 `~/.gradle/wrapper/dists/`。
 
 - debug 包：`app/build/outputs/apk/debug/app-debug.apk`
 - release 包：`app/build/outputs/apk/release/app-release.apk`（需要签名属性，见下）
